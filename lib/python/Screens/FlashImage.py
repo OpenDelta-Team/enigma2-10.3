@@ -87,7 +87,7 @@ class SelectImage(Screen):
 				try:
 					self.jsonlist = dict(json.load(urlopen('http://downloads.areadeltasat.net/json/%s' % model)))
 					if config.usage.alternative_imagefeed.value:
-						self.jsonlist.update(dict(json.load(urlopen('%s%s' % (config.usage.alternative_imagefeed.value, model)))))
+						self.ustym4kpro.update(dict(json.load(urlopen('%s%s' % (config.usage.alternative_imagefeed.value, model)))))
 				except:
 					pass
 			self.imagesList = dict(self.jsonlist)
