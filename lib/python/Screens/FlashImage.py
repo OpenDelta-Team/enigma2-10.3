@@ -85,7 +85,7 @@ class SelectImage(Screen):
 		if not self.imagesList:
 			if not self.jsonlist:
 				try:
-					self.jsonlist = dict(json.load(urlopen('http://downloads.areadeltasat.net/json/%s' % model)))
+					self.jsonlist = dict(xml.load(urlopen('http://downloads.areadeltasat.net/json/%s' % model)))
 					if config.usage.alternative_imagefeed.value:
 						self.jsonlist.update(dict(json.load(urlopen('%s%s' % (config.usage.alternative_imagefeed.value, model)))))
 				except:
